@@ -1,0 +1,166 @@
+
+/*os números definem a intensidade da cor*/
+:root{
+    --color-ligth-50:#f8fafc ;
+    --color-dark-50:#797984;
+    -color-dark-100:#312d37;
+    -color-dark-200:#000000;
+
+    --color-gray-50:#8c8c8c;
+    --color-gray-100:#666666;
+    --color-gray-200:#3c3c3c;
+    
+    --color-gradient: linear-gradient(90deg, var(--color-gray-50), var(--color-gray-100), var(--color-gray-200));
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#container{
+    height: 100vh;
+    width: 100%;
+    background-color: #121212;;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#login{
+    background: var(--color-ligth-50);
+    display: flex;
+    flex-direction: column;
+    padding: 30px 40px;
+    border-radius: 8px;
+    gap: 30px;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.336);
+  animation: dark-para-light 0.3s ease-in-out;
+
+}
+#cabecalho{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#cabecalho h1{
+    font-size: 40px;
+    position: relative;
+}
+#cabecalho h1::before{
+    position: absolute;
+    content: '';
+    width: 40%;
+    background-color: var(--color-gray-50);
+    height: 3px;
+    bottom: 4px;
+    border-radius: 5px;
+}
+#icone-lua{
+    cursor: pointer;
+    font-size: 20px;
+}
+
+#icone-carrossel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#icone-carrossel img {
+    width: 150px;
+    height: 150px;
+    border: 2px solid black;
+    margin: 0 20px;
+}
+
+#icone-carrossel button {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#icone-carrossel button:hover {
+    color: black;
+}
+
+
+#inputs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.inputbox{
+    font-size: 14px;
+    color: var(--color-dark-50);
+}
+.input-field label{
+    font-size: 4px;
+    color: var(--color-gray-100);
+}
+.input-field{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 3px;
+    cursor: text;
+    border-bottom: 1px solid var(--color-gray-50);
+}
+.input-field i{
+    font-size: 18px;
+    color: var(--color-gray-200);
+}
+.input-field input{
+    border: none;
+    background: transparent;
+    width: 260px;
+    font-size: 18px ;
+    padding: 0px 5px;
+}
+.input-field input:focus{
+    outline: none;
+}
+#btnlog{
+border: none;
+background: var(--color-gradient);
+color: var(--color-ligth-50);
+padding: 7px;
+font-size: 18px;
+font-weight: bold;
+}
+#btnlog:hover{
+    transform: scale(1.05);
+}
+.dark#login{
+  color: var(--color-ligth-50);
+  background-color: var(--color-dark-200);  
+  animation: light-para-dark 0.3s ease-in-out;
+}
+.dark#login .input-field input,
+.dark#login .input-field i {
+color: var(--color-ligth-50);
+}
+.dark#login .inputbox label{
+    color: var(--color-ligth-50);
+}
+
+@keyframes dark-para-light{
+    0%{
+        background: var(--color-dark-200);
+    }
+    100%{
+        background: var(--color-ligth-50);
+    }
+}
+
+@keyframes light-para-dark{
+    0%{
+        background: var(--color-ligth-50);
+    }
+    100%{
+        background: var(--color-dark-200);
+    }
+}

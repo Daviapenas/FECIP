@@ -1,0 +1,282 @@
+Body {
+    background-color: #121212;
+    color: white;
+    height: 1300px;
+}
+
+#menu {
+    color: white;
+}
+
+#imglogo {
+    width: 151px;
+    height: 76px;
+}
+
+nav {
+    background-color: #181a2f;
+}
+
+.box1 {
+    position: absolute;
+    left: 10%;
+    top: 120px;
+    width: 900px;
+    height: 150px;
+}
+
+.box1 img {
+    width: 100%;
+    height: 100%;
+}
+
+.box4 {
+    position: absolute;
+    top: 300px;
+    left: 10%;
+    width: 900px;
+    height: 450px;
+    border: 3px solid;
+}
+.game-catalog {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.game-card {
+    background-color: #1e1e1e;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.game-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.game-card h2 {
+    margin: 15px 0;
+    font-size: 1.5rem;
+    color: #f5f5f5;
+}
+
+.game-card p {
+    font-size: 1rem;
+    color: #b5b5b5;
+    margin-bottom: 15px;
+}
+
+.game-card button {
+    background-color: #4267b3;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.game-card button:hover {
+    background-color: #365899;
+}
+
+main {
+    margin-top: 35vh;
+}
+
+footer {
+    width: 100%;
+    color: #f5f5f5;
+}
+
+.footer_link {
+    text-decoration: none;
+}
+
+#footer-content {
+    background-color: #171717;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 3rem 3.5rem;
+}
+
+.contatos h1 {
+    margin-bottom: 0.75rem;
+}
+
+#socialmedia {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+#socialmedia .footer_link {
+    height: 2.5rem;
+    width: 2.5rem;
+    color: #f5f5f5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s;
+}
+
+#instagram {
+    background: linear-gradient(#7f37c9, #ff2992, #ff9807);
+}
+
+#Gmail {
+    background-color: #4267b3;
+}
+
+#socialmedia .footer_link:hover {
+    opacity: 0.8;
+}
+
+#socialmedia .footer_link {
+    font-size: 1.25rem;
+}
+
+.footer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    list-style: none;
+}
+
+.footer-list .footer-link {
+    color: #a8a29e;
+    text-decoration: none;
+    transition: all 0.4s;
+}
+
+.footer-list .footer-link:hover {
+    color: #7f37c9;
+}
+
+.footer-coment {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.footer-coment p {
+    color: #a8a29e;
+}
+
+.input-coment {
+    display: flex;
+    align-items: center;
+    background-color: #0c0c0c;
+    border-radius: 4px;
+}
+
+.input-coment input {
+    all: unset;
+    padding: 0.75rem;
+    width: 100%;
+}
+
+.input-coment button {
+    background-color: #4267b3;
+    border: none;
+    color: #f5f5f5;
+    padding: 0px 1.25rem;
+    font-size: 1.25rem;
+    height: 100%;
+    border-radius: 0px 4px 4px 0px;
+    cursor: pointer;
+}
+
+.input-coment button:hover {
+    opacity: 0.8;
+    transition: all 0.4s;
+}
+
+.footer-copyright {
+    display: flex;
+    justify-content: center;
+    background-color: #0c0c0c;
+    font-size: 0.9rem;
+    padding: 1.5rem;
+    font-weight: 100;
+}
+
+#QR {
+    width: 150px;
+    height: 150px;
+}
+
+.qrcode {
+    float: right;
+    margin-left: 80px;
+}
+
+/* Responsividade para telas menores */
+@media screen and (max-width: 1024px) {
+    .box1, .box4 {
+        width: 80%;
+        left: 10%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .box1, .box4 {
+        width: 100%;
+        left: 0;
+        padding: 0 15px;
+    }
+
+    .game_list .games {
+        margin-right: 50px;
+    }
+
+    #footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .qrcode {
+        float: none;
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 462px) {
+    .box1, .box4 {
+        width: 100%;
+        left: 0;
+        padding: 0 10px;
+    }
+
+    .game_list .games {
+        margin-right: 20px;
+    }
+
+    #footer-content {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 3rem 2rem;
+    }
+
+    .qrcode {
+        float: none;
+        margin: 0 auto;
+    }
+
+    #QR {
+        width: 100px;
+        height: 100px;
+    }
+}
