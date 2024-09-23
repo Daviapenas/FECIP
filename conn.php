@@ -55,6 +55,9 @@ if(isset($_POST['nome_user']) && isset($_POST['senha_user']) && isset($_POST['ic
 else{
     echo "erro com a requisisao POST";
 }
+
+    $response = array('status' => 'sucesso', 'data' => $data);
+    echo json_encode($response);
 // Fechar a conexão
 sqlsrv_close($conn);
 ?>
