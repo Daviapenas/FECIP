@@ -1,6 +1,6 @@
 function btncadastro(){
-    window.location.href="./pages/cadastro.html";
+    window.location.href="cadastro.html";
 }
 function btnlogin(){
-    window.location.href="./pages/login.html";
+    window.location.href="login.html";
 }
