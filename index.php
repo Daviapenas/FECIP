@@ -23,11 +23,11 @@ if ($conn === false) {
 
 echo "Conexão bem-sucedida com o SQL Server!";
 
-if(isset($_POST['nome_user']) && isset($_POST['senha_user']) && isset($_POST['icone_escolhido'])){
+if(isset($_GET['nome_user']) && isset($_GET['senha_user']) && isset($_GET['icone_escolhido'])){
 
- $nome_user = $_POST['nome_user'];  
- $senha_user = $_POST['senha_user'];  
- $icone_user = $_POST['icone_escolhido'];
+ $nome_user = $_GET['nome_user'];  
+ $senha_user = $_GET['senha_user'];  
+ $icone_user = $_GET['icone_escolhido'];
 
  echo $nome_user, $senha_user, $icone_user;
 
