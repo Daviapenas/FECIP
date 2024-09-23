@@ -40,3 +40,18 @@ function mudarIcone(direcao) {
     // Atualiza o valor do campo oculto para o ícone selecionado
     document.getElementById('icone-escolhido-input').value = icones[indiceAtual];
 }
+
+fetch('https://http://digitalcore.azurewebsites.net/conn.php', {
+    method: 'POST',
+    headers: {
+        'Content-Type:
+            'application/json'
+    },
+    body: JSON.stringify({ key:
+        'value'})
+})
+.then(response => response.json())
+.then(data => console.log(data))
+.catch(error =>
+    console.log('erro', error));
+    
