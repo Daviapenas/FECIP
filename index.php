@@ -1,12 +1,4 @@
 <?php
-header("Access-Control-Allow-Origin: *"); // Para permitir todas as origens
-header("Access-Control-Allow-Methods: POST, GET, OPTIONS"); // Métodos permitidos
-header("Access-Control-Allow-Headers: Content-Type"); // Cabeçalhos permitidos
-
-// Responder à requisição preflight
-if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
-    exit(0);
-}
 
 // Defina as informações de conexão
 $serverName = "digitalcoreserver.database.Windows.net";  // Host do servidor SQL
@@ -14,8 +6,8 @@ $connectionOptions = array(
     "Database" => "DigitalCoreDB",  // Nome do banco de dados
     "Uid" => "DIGITAL.CORE",  // Nome de usuário
     "PWD" => "@FECIP2K24",  // Senha
-    "Encrypt" => false,  // SSL habilitado (recomendado para Azure)
-    "TrustServerCertificate" => true,  // Certificado SSL
+    "Encrypt" => true,  // SSL habilitado (recomendado para Azure)
+    "TrustServerCertificate" => false,  // Certificado SSL
     "LoginTimeout" => 30,  // Timeout da conexão
 );
 
@@ -58,10 +50,6 @@ if(isset($_POST['nome_user']) && isset($_POST['senha_user']) && isset($_POST['ic
     }
 }
 else{
-    echo "dados nao coletados...";
-}
-else{
-    error_log("Método não suportado: " . $_SERVER['REQUEST_METHOD']);
     echo "erro com a requisisao post";
 }
 // Fechar a conexão
