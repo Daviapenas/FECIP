@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Adicionando o CSS do BootStrap 5-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!--Adicionando o JS do BootStrap 5-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./js/botoes.js"></script>
+    <!--Adicionando o CSS normalmente-->
+    <link rel="stylesheet" href="./css/style.css">
+    <!--Adicionando o JQuery e o Cycle 2 ao projeto-->
+    <script src="./js/jquery-3.7.1.min.js"></script>
+   <script src="./js/jquery.cycle2.js"></script>
+    <!--Link dos icones do Font-awesome-->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>D-Core</title>
+</head>
+<body>
+<script type="text/javascript" src="./js/pesquisa.js"></script>
+<!--Imagem da logo na Navbar-->    
+<nav class="navbar navbar-expand-sm">
+<div class="container-fluid">
+<a href="" class="navbar-brand"><img id="imglogo" src="./images/logo.png" alt="LOGO"></a>
+
+<!--Menu da Navbar-->
+<div class="collapse navbar-collapse">
+    <div class="navbar-nav">
+        <div class="dropdown">
+        <a href="#" class="nav-link active dropdown-toggle" data-bs-toggle="dropdown" id="menu">Menu</a>
+        <ul class="dropdown-menu">
+            <li><a href="#" class="dropdown-item">Launcher</a></li>
+            <li><a href="#" class="dropdown-item">Misc</a></li>
+            <li><a href="#" class="dropdown-item">sobre</a></li>
+        </ul>
+        </div>
+    </div>
+</div>
+<!--Barra de pesquisa-->
+<form action="" class="dflex" style="margin-right: 340px;">
+    <div class="input-group me-5"><input type="search" name="" id="searchBar" class="form-control" placeholder="Buscar Jogos"><button type="submit" class="btn btn-outline-success">Buscar</button></div>
+</form>
+
+<!--Botões de cadastro-->
+<div class="container-btn">
+    <div class="btn-group">
+    <button class="btn btn-outline-primary" onclick="btncadastro()">Sign-up</button>
+    
+    <button class="btn btn-outline-success" onclick="btnlogin()">Sign-in</button>
+    </div>
+    </div>
+
+</div>
+</nav>
+
+<div class="box1 cycle-slideshow" data-cycle-fx="scrollHorz">
+  <img src="./images/img1.png" alt="">
+  <img src="./images/img2.png" alt="">
+  <img src="./images/img3.png" alt="">
+  <img src="./images/img4.png" alt="">
+</div>
+
+<main>
+    <h1>Catálogo de Jogos</h1>
+<br><br>
+    <h2>Competitivo</h2>
+    <br>
+    <div class="game-catalog">
+        <!-- Card do Jogo 1 -->
+        <div class="game-card">
+            <img src="jogo1.jpg" alt="Jogo 1">
+            <h2>Jogo 1</h2>
+            <p>Aventura épica em um mundo aberto cheio de mistérios e perigos.</p>
+            <button>Iniciar</button>
+        </div>
+
+        <!-- Card do Jogo 2 -->
+        <div class="game-card">
+            <img src="jogo2.jpg" alt="Jogo 2">
+            <h2>Jogo 2</h2>
+            <p>RPG cheio de ação com personagens cativantes e batalhas emocionantes.</p>
+            <button>Iniciar</button>
+        </div>
+
+        <!-- Card do Jogo 3 -->
+        <div class="game-card">
+            <img src="jogo3.jpg" alt="Jogo 3">
+            <h2>Jogo 3</h2>
+            <p>Simulador de corrida com gráficos impressionantes e carros realistas.</p>
+            <button>Iniciar</button>
+        </div>
+
+        <!-- Card do Jogo 4 -->
+        <div class="game-card">
+            <img src="jogo3.jpg" alt="Jogo 4">
+            <h2>Jogo 4</h2>
+            <p>Simulador de corrida com gráficos impressionantes e carros realistas.</p>
+            <button>Iniciar</button>
+        </div>
+        </div>
+        <br>
+        <h2>Cooperativo</h2>
+        <br>
+        <div class="game-catalog">
+        <!-- Card do Jogo 5 -->
+        <div class="game-card">
+            <img src="jogo3.jpg" alt="Jogo 5">
+            <h2>Jogo 5</h2>
+            <p>Simulador de corrida com gráficos impressionantes e carros realistas.</p>
+            <button>Iniciar</button>
+        </div>
+
+        <!-- Card do Jogo 6 -->
+        <div class="game-card">
+            <img src="jogo3.jpg" alt="Jogo 6">
+            <h2>Jogo 6</h2>
+            <p>Simulador de corrida com gráficos impressionantes e carros realistas.</p>
+            <button>Iniciar</button>
+        </div>
+
+        <!-- Card do Jogo 7 -->
+        <div class="game-card">
+            <img src="jogo3.jpg" alt="Jogo 7">
+            <h2>Jogo 7</h2>
+            <p>Simulador de corrida com gráficos impressionantes e carros realistas.</p>
+            <button>Iniciar</button>
+        </div>
+        
+        <!-- Card do Jogo 8 -->
+        <div class="game-card">
+            <img src="jogo3.jpg" alt="Jogo 8">
+            <h2>Jogo 8</h2>
+            <p>Simulador de corrida com gráficos impressionantes e carros realistas.</p>
+            <button>Iniciar</button>
+        </div>
+        </div>
+        <br>
+        <h2>Para meninas</h2>
+        <br>
+        <div class="game-catalog">
+        <!-- Card do Jogo 9 -->
+        <div class="game-card">
+            <img src="jogo3.jpg" alt="Jogo 9">
+            <h2>Jogo 9</h2>
+            <p>Simulador de corrida com gráficos impressionantes e carros realistas.</p>
+            <button>Iniciar</button>
+        </div>
+
+        <!-- Card do Jogo 10 -->
+        <div class="game-card">
+            <img src="jogo3.jpg" alt="Jogo 10">
+            <h2>Jogo 10</h2>
+            <p>Simulador de corrida com gráficos impressionantes e carros realistas.</p>
+            <button>Iniciar</button>
+        </div>
+
+
+        <!-- Card do Jogo 11 -->
+        <div class="game-card">
+            <img src="jogo3.jpg" alt="Jogo 11">
+            <h2>Jogo 11</h2>
+            <p>Simulador de corrida com gráficos impressionantes e carros realistas.</p>
+            <button>Iniciar</button>
+        </div>
+
+
+        <!-- Card do Jogo 12 -->
+        <div class="game-card">
+            <img src="jogo3.jpg" alt="Jogo 12">
+            <h2>Jogo 12</h2>
+            <p>Simulador de corrida com gráficos impressionantes e carros realistas.</p>
+            <button>Iniciar</button>
+        </div>
+    </div>
+</main>
+
+</div>
+<!--rodapé do site com as infos-->
+<main>
+<footer>
+    <div id="footer-content">
+        <!--Nossa Logo-->
+        <div class="contatos">
+            <h1><img id="imglogo" src="./images/logo.png" alt="logo"></h1>
+        <!--Links de social media-->
+        <div id="socialmedia">
+             <!--Ícone do instagram-->
+            <a href="https://www.instagram.com/digitalcore.x/" class="footer_link" id="instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+             <!--Ícone do Gmail -->
+            <a href="#" class="footer_link" id="Gmail">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+        </div>
+
+        </div>
+        
+        <ul class="footer-list">
+            <li>
+                <h3>Sobre</h3>
+            </li>
+            <li>
+            <a href="#" class="footer-link">Quem somos?</a>
+            </li>           
+         </ul>
+        <div class="footer-coment">
+        <h3>Comente!!</h3>
+        <p>Deixe seu comentário sobre nosso projeto!!</p>
+        <div class="input-coment">
+            <input type="email" id="email">
+            <button><i class="fa-solid fa-paper-plane"></i></button>
+        </div>
+        </div>
+
+        <!--QRCode do projeto-->
+        <div class="qrcode">
+            <img id="QR" src="./images/QRCode.png" alt="QR">
+        </div>
+
+    </div>
+
+    <div class="footer-copyright">
+        &#169
+        2024 todos os direitos reservados-FECIP 2024
+    </div>
+
+</footer>
+</main>
+</body>
+</html>
