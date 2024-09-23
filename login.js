@@ -41,14 +41,16 @@ function mudarIcone(direcao) {
     document.getElementById('icone-escolhido-input').value = icones[indiceAtual];
 }
 
+const nome = document.getElementByID('nome').value;
+const senha = document.getElementByID('senha').value;
+
+
 fetch('https://http://digitalcore.azurewebsites.net/conn.php', {
     method: 'POST',
     headers: {
-        'Content-Type:
-            'application/json'
+        'Content-Type: 'application/json'
     },
-    body: JSON.stringify({ key:
-        'value'})
+    body: JSON.stringify({ nome: nome, senha: senha })
 })
 .then(response => response.json())
 .then(data => console.log(data))
