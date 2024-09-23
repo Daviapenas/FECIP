@@ -56,7 +56,9 @@ if(isset($_POST['nome_user']) && isset($_POST['senha_user']) && isset($_POST['ic
     } else {
         echo "Usuário inserido com sucesso!<br>";
     }
-    }
+}
+else{
+    echo "dados nao coletados...";
 }
 else{
     error_log("Método não suportado: " . $_SERVER['REQUEST_METHOD']);
