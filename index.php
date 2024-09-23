@@ -1,5 +1,4 @@
 <?php
-
 header("Access-Control-Allow-Origin: *"); // Para permitir todas as origens
 header("Access-Control-Allow-Methods: POST, GET, OPTIONS"); // Métodos permitidos
 header("Access-Control-Allow-Headers: Content-Type"); // Cabeçalhos permitidos
@@ -8,14 +7,15 @@ header("Access-Control-Allow-Headers: Content-Type"); // Cabeçalhos permitidos
 if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
     exit(0);
 }
+
 // Defina as informações de conexão
 $serverName = "digitalcoreserver.database.Windows.net";  // Host do servidor SQL
 $connectionOptions = array(
     "Database" => "DigitalCoreDB",  // Nome do banco de dados
     "Uid" => "DIGITAL.CORE",  // Nome de usuário
     "PWD" => "@FECIP2K24",  // Senha
-    "Encrypt" => true,  // SSL habilitado (recomendado para Azure)
-    "TrustServerCertificate" => false,  // Certificado SSL
+    "Encrypt" => false,  // SSL habilitado (recomendado para Azure)
+    "TrustServerCertificate" => true,  // Certificado SSL
     "LoginTimeout" => 30,  // Timeout da conexão
 );
 
