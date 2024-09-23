@@ -1,7 +1,7 @@
 <?php
 
 // Defina as informações de conexão
-$serverName = "digitalcoreserver.database.Windows.net";  // Host do servidor SQL
+$serverName = "digitalcoreserver.database.windows.net";  // Host do servidor SQL
 $connectionOptions = array(
     "Database" => "DigitalCoreDB",  // Nome do banco de dados
     "Uid" => "DIGITAL.CORE",  // Nome de usuário
