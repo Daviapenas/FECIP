@@ -24,6 +24,7 @@ if ($conn === false) {
 echo "Conexão bem-sucedida com o SQL Server!";
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+     error_log("Requisição POST recebida");
     
 if(isset($_POST['nome_user']) && isset($_POST['senha_user']) && isset($_POST['icone_escolhido'])){
 
@@ -51,6 +52,7 @@ if(isset($_POST['nome_user']) && isset($_POST['senha_user']) && isset($_POST['ic
     }
 }
 else{
+    error_log("Método não suportado: " . $_SERVER['REQUEST_METHOD']);
     echo "erro com a requisisao post";
 }
 // Fechar a conexão
