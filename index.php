@@ -1,6 +1,13 @@
-
-
 <?php
+
+header("Access-Control-Allow-Origin: *"); // Para permitir todas as origens
+header("Access-Control-Allow-Methods: POST, GET, OPTIONS"); // Métodos permitidos
+header("Access-Control-Allow-Headers: Content-Type"); // Cabeçalhos permitidos
+
+// Responder à requisição preflight
+if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
+    exit(0);
+}
 // Defina as informações de conexão
 $serverName = "digitalcoreserver.database.Windows.net";  // Host do servidor SQL
 $connectionOptions = array(
