@@ -22,14 +22,14 @@ if ($conn === false) {
 
 echo "Conexão bem-sucedida com o SQL Server!";
 
-if ($_SERVER['REQUEST_METHOD'] == 'GET') {
-     error_log("Requisição GET recebida");
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+     error_log("Requisição POST recebida");
     
-if(isset($_GET['nome_user']) && isset($_GET['senha_user']) && isset($_GET['icone_escolhido'])){
+if(isset($_POST['nome_user']) && isset($_POST['senha_user']) && isset($_POST['icone_escolhido'])){
 
- $nome_user = $_GET['nome_user'];  
- $senha_user = $_GET['senha_user'];  
- $icone_user = $_GET['icone_escolhido'];
+ $nome_user = $_POST['nome_user'];  
+ $senha_user = $_POST['senha_user'];  
+ $icone_user = $_POST['icone_escolhido'];
 
  echo $nome_user, $senha_user, $icone_user;
 
@@ -50,7 +50,7 @@ if(isset($_GET['nome_user']) && isset($_GET['senha_user']) && isset($_GET['icone
     }
 }
 else{
-    echo "erro com a requisisao GET";
+    echo "erro com a requisisao POST";
 }
 // Fechar a conexão
 sqlsrv_close($conn);
