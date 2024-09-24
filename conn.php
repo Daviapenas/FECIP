@@ -58,6 +58,7 @@ try {
     echo json_encode($response);
 } finally {
     // Fechar a conexão, se estiver aberta
+    echo "caiu diretamente no finally";
     if (isset($conn) && $conn !== false) {
         sqlsrv_close($conn);
     }
