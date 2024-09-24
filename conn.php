@@ -1,7 +1,20 @@
 <?php
 
+// Habilitar exibição de erros
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+// Verificar método HTTP
+if ($_SERVER['REQUEST_METHOD'] != 'POST') {
+    header('HTTP/1.1 405 Method Not Allowed');
+    echo 'Método não permitido. Use POST.';
+    exit();
+}
+
 header('Content-Type: application/json');
-$data = json_decode(file_get_contents('php: //input'), true);
+$data = json_decode(file_get_contents('php://input'), true);
+
 
 // Defina as informações de conexão
 $serverName = "digitalcoreserver.database.windows.net";  // Host do servidor SQL
