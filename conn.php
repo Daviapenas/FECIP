@@ -54,11 +54,14 @@ try {
     }
 } catch (Exception $e) {
     // Capturar erros e retornar em formato JSON
+echo "Caiu no catch: " . $e->getMessage();    
+
+    
     $response = array('status' => 'erro', 'message' => $e->getMessage());
     echo json_encode($response);
 } finally {
     // Fechar a conexão, se estiver aberta
-    echo "caiu diretamente no finally";
+    echo "caiu no finally";
     if (isset($conn) && $conn !== false) {
         sqlsrv_close($conn);
     }
