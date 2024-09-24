@@ -15,9 +15,11 @@ try {
         "LoginTimeout" => 30,  // Timeout da conexão
     );
 
+    
     // Estabelecer a conexão com o SQL Server
     $conn = sqlsrv_connect($serverName, $connectionOptions);
-
+    
+echo "conexao feita com o sql server";
     // Verificar se a conexão foi bem-sucedida
     if ($conn === false) {
         throw new Exception('Falha na conexão com o SQL Server: ' . print_r(sqlsrv_errors(), true));
