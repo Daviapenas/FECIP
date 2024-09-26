@@ -19,7 +19,8 @@ try {
     // Estabelecer a conexão com o SQL Server
     $conn = sqlsrv_connect($serverName, $connectionOptions);
     
-echo "conexao feita com o sql server";
+echo "VOCÊ ESTÁ CONECTADO AO SQL SERVER. . .";
+    <br>
     // Verificar se a conexão foi bem-sucedida
     if ($conn === false) {
         throw new Exception('Falha na conexão com o SQL Server: ' . print_r(sqlsrv_errors(), true));
@@ -48,6 +49,7 @@ echo "conexao feita com o sql server";
                 throw new Exception('Falha ao inserir usuário: ' . print_r(sqlsrv_errors(), true));
             } else {
                 $response = array('status' => 'sucesso', 'message' => 'Usuário inserido com sucesso!');
+                <br>
                 echo json_encode($response);
             }
         } else {
@@ -63,7 +65,6 @@ echo "Caiu no catch: " . $e->getMessage();
     echo json_encode($response);
 } finally {
     // Fechar a conexão, se estiver aberta
-    echo "caiu no finally";
     if (isset($conn) && $conn !== false) {
         sqlsrv_close($conn);
     }
