@@ -31,7 +31,7 @@ echo "Caiu no catch: " . $e->getMessage();
     $response = array('status' => 'erro', 'message' => $e->getMessage());
     echo json_encode($response);
 } finally {
-    // Fechar a conexão, se estiver aberta
+    // Fechar a conexão, se estiver aberta AAAAAAAAAAAAAAAA TESTE
     if (isset($conn) && $conn !== false) {
         sqlsrv_close($conn);
     }
